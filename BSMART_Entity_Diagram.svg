@@ -1,0 +1,70 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1200" viewBox="0 0 1700 1200">
+  <defs>
+    <style>
+      .title{font:700 34px Arial;fill:#0b2545}.entityTitle{font:700 20px Arial;fill:#fff}.field{font:15px Consolas,monospace;fill:#18324a}.pk{font:700 15px Consolas,monospace;fill:#b42318}.rel{font:14px Arial;fill:#263238}.line{stroke:#40566b;stroke-width:2.4;fill:none}.crow{stroke:#40566b;stroke-width:2.4;fill:none}.card{fill:#fff;stroke:#1b75bb;stroke-width:3}.head{fill:#0f76bd}
+    </style>
+  </defs>
+  <rect width="1700" height="1200" fill="#f6fbff"/>
+  <text x="850" y="55" text-anchor="middle" class="title">B-SMART Entity Relationship Diagram</text>
+
+  <g id="barangay" transform="translate(690,95)">
+    <rect class="card" width="310" height="125" rx="10"/><rect class="head" width="310" height="38" rx="10"/>
+    <text x="155" y="25" text-anchor="middle" class="entityTitle">BARANGAY</text>
+    <text x="18" y="70" class="pk">PK id</text><text x="18" y="98" class="field">name</text>
+  </g>
+
+  <g id="users" transform="translate(80,310)">
+    <rect class="card" width="365" height="360" rx="10"/><rect class="head" width="365" height="38" rx="10"/>
+    <text x="182" y="25" text-anchor="middle" class="entityTitle">USER_ACCOUNT</text>
+    <text x="18" y="68" class="pk">PK id</text><text x="18" y="94" class="field">resident_code</text><text x="18" y="120" class="field">username, password, role</text><text x="18" y="146" class="field">FK barangay_id</text><text x="18" y="172" class="field">full_name, first_name, last_name</text><text x="18" y="198" class="field">birthday, age, gender</text><text x="18" y="224" class="field">address, email, mobile_number</text><text x="18" y="250" class="field">place_of_birth, civil_status</text><text x="18" y="276" class="field">religion, citizenship</text><text x="18" y="302" class="field">is_frozen</text><text x="18" y="328" class="field">is_archived</text>
+  </g>
+
+  <g id="records" transform="translate(560,310)">
+    <rect class="card" width="360" height="345" rx="10"/><rect class="head" width="360" height="38" rx="10"/>
+    <text x="180" y="25" text-anchor="middle" class="entityTitle">HEALTH_RECORD</text>
+    <text x="18" y="68" class="pk">PK id</text><text x="18" y="94" class="field">resident_code</text><text x="18" y="120" class="field">first_name, last_name</text><text x="18" y="146" class="field">diagnosis, treatment</text><text x="18" y="172" class="field">assigned_doc_name</text><text x="18" y="198" class="field">record_date</text><text x="18" y="224" class="field">gender, age, birthday</text><text x="18" y="250" class="field">violation</text><text x="18" y="276" class="field">is_archived</text><text x="18" y="302" class="field">FK barangay_id</text>
+  </g>
+
+  <g id="services" transform="translate(1070,310)">
+    <rect class="card" width="300" height="190" rx="10"/><rect class="head" width="300" height="38" rx="10"/>
+    <text x="150" y="25" text-anchor="middle" class="entityTitle">HEALTH_SERVICE</text>
+    <text x="18" y="70" class="pk">PK id</text><text x="18" y="98" class="field">name</text><text x="18" y="126" class="field">description</text><text x="18" y="154" class="field">service_type, status</text>
+  </g>
+
+  <g id="appointments" transform="translate(1070,610)">
+    <rect class="card" width="360" height="285" rx="10"/><rect class="head" width="360" height="38" rx="10"/>
+    <text x="180" y="25" text-anchor="middle" class="entityTitle">APPOINTMENT</text>
+    <text x="18" y="68" class="pk">PK id</text><text x="18" y="94" class="field">FK user_id</text><text x="18" y="120" class="field">FK service_id</text><text x="18" y="146" class="field">appointment_date, time_slot</text><text x="18" y="172" class="field">notes, status</text><text x="18" y="198" class="field">assigned_doc_name</text><text x="18" y="224" class="field">FK barangay_id</text><text x="18" y="250" class="field">created_at</text>
+  </g>
+
+  <g id="medicine" transform="translate(250,760)">
+    <rect class="card" width="290" height="205" rx="10"/><rect class="head" width="290" height="38" rx="10"/>
+    <text x="145" y="25" text-anchor="middle" class="entityTitle">MEDICINE</text>
+    <text x="18" y="70" class="pk">PK id</text><text x="18" y="98" class="field">medicine_code</text><text x="18" y="126" class="field">name, quantity</text><text x="18" y="154" class="field">expiry_date, is_archived</text><text x="18" y="182" class="field">FK barangay_id</text>
+  </g>
+
+  <g id="vaccine" transform="translate(620,760)">
+    <rect class="card" width="290" height="205" rx="10"/><rect class="head" width="290" height="38" rx="10"/>
+    <text x="145" y="25" text-anchor="middle" class="entityTitle">VACCINE</text>
+    <text x="18" y="70" class="pk">PK id</text><text x="18" y="98" class="field">vaccine_code</text><text x="18" y="126" class="field">name, quantity</text><text x="18" y="154" class="field">expiry_date, is_archived</text><text x="18" y="182" class="field">FK barangay_id</text>
+  </g>
+
+  <g id="archive" transform="translate(80,805)">
+    <rect class="card" width="140" height="135" rx="10"/><rect class="head" width="140" height="38" rx="10"/>
+    <text x="70" y="25" text-anchor="middle" class="entityTitle">ARCHIVE</text>
+    <text x="18" y="70" class="pk">PK id</text><text x="18" y="98" class="field">record_id</text><text x="18" y="126" class="field">archived_at</text>
+  </g>
+
+  <path class="line" d="M735 220 C645 260 515 285 445 355"/><text x="530" y="285" class="rel">has accounts</text>
+  <path class="line" d="M845 220 C835 260 765 280 740 310"/><text x="765" y="275" class="rel">has records</text>
+  <path class="line" d="M1000 180 C1260 230 1260 545 1250 610"/><text x="1280" y="245" class="rel">receives appointments</text>
+  <path class="line" d="M790 220 C640 390 415 690 395 760"/><text x="455" y="705" class="rel">stores medicines</text>
+  <path class="line" d="M885 220 C825 380 770 690 765 760"/><text x="780" y="705" class="rel">stores vaccines</text>
+
+  <path class="line" d="M445 510 C690 575 850 670 1070 720"/><text x="730" y="620" class="rel">books</text>
+  <path class="line" d="M1220 500 C1220 545 1220 565 1220 610"/><text x="1235" y="560" class="rel">selected for</text>
+  <path class="line" d="M560 610 C405 680 260 760 220 835"/><text x="330" y="725" class="rel">archived in</text>
+
+  <text x="850" y="1080" text-anchor="middle" class="field">Legend: PK = primary key, FK = foreign key. One barangay can have many accounts, health records, appointments, medicines, and vaccines.</text>
+  <text x="850" y="1110" text-anchor="middle" class="field">Accounts book appointments. Appointments use health services. Archived health records can be logged in archive records.</text>
+</svg>

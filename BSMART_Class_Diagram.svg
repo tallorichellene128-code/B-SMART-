@@ -1,0 +1,138 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <defs>
+    <style>
+      .title{font:700 34px Arial;fill:#0b2545}.section{font:700 22px Arial;fill:#fff}.boxTitle{font:700 18px Arial;fill:#0b2545}.member{font:15px Arial;fill:#1d3557}.rel{font:14px Arial;fill:#263238}.line{stroke:#456;stroke-width:2;fill:none}.inherit{stroke:#456;stroke-width:2;fill:none;marker-end:url(#tri)}.dep{stroke:#456;stroke-width:2;stroke-dasharray:7 5;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#456"/></marker>
+    <marker id="tri" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M2,2 L12,7 L2,12 Z" fill="#fff" stroke="#456" stroke-width="2"/></marker>
+    <linearGradient id="header" x1="0" x2="1"><stop offset="0" stop-color="#0f76bd"/><stop offset="1" stop-color="#14b8c8"/></linearGradient>
+  </defs>
+  <rect width="1800" height="1200" fill="#f6fbff"/>
+  <text x="900" y="55" text-anchor="middle" class="title">B-SMART Class Diagram</text>
+
+  <g transform="translate(60,100)">
+    <rect x="0" y="0" width="300" height="250" rx="12" fill="#fff" stroke="#1b75bb" stroke-width="3"/>
+    <rect x="0" y="0" width="300" height="42" rx="12" fill="url(#header)"/>
+    <text x="150" y="28" text-anchor="middle" class="section">Login Forms</text>
+    <text x="20" y="75" class="boxTitle">loginAS : Form</text>
+    <text x="20" y="103" class="member">+ShowLoginOptions()</text>
+    <text x="20" y="135" class="boxTitle">loginMayor/loginLGU/loginBCap/loginRes</text>
+    <text x="20" y="163" class="member">+ValidateLogin()</text>
+    <text x="20" y="188" class="member">+ResolveBarangayId()</text>
+    <text x="20" y="213" class="member">+OpenDashboard()</text>
+  </g>
+
+  <g transform="translate(430,100)">
+    <rect x="0" y="0" width="360" height="280" rx="12" fill="#fff" stroke="#1b75bb" stroke-width="3"/>
+    <rect x="0" y="0" width="360" height="42" rx="12" fill="url(#header)"/>
+    <text x="180" y="28" text-anchor="middle" class="section">Shared Data and Helpers</text>
+    <text x="20" y="75" class="boxTitle">Session</text>
+    <text x="20" y="101" class="member">+UserID, +Role, +BarangayID, +BarangayName</text>
+    <text x="20" y="126" class="member">+IsMayor, +Clear()</text>
+    <text x="20" y="160" class="boxTitle">BsmartIdHelper</text>
+    <text x="20" y="186" class="member">+EnsureCodes()</text>
+    <text x="20" y="211" class="member">+GetOrCreateResidentCode()</text>
+    <text x="20" y="236" class="member">+NextMedicineCode(), +NextVaccineCode()</text>
+  </g>
+
+  <g transform="translate(850,100)">
+    <rect x="0" y="0" width="380" height="280" rx="12" fill="#fff" stroke="#1b75bb" stroke-width="3"/>
+    <rect x="0" y="0" width="380" height="42" rx="12" fill="url(#header)"/>
+    <text x="190" y="28" text-anchor="middle" class="section">Mayor Area</text>
+    <text x="20" y="75" class="boxTitle">MayorDash : Form</text>
+    <text x="20" y="101" class="member">+LoadSummary(), +LoadRecentHealthRecords()</text>
+    <text x="20" y="135" class="boxTitle">MayorResRec / MayorResHealthRec</text>
+    <text x="20" y="161" class="member">+LoadResidentRecords(), +DownloadRecordsPdf()</text>
+    <text x="20" y="195" class="boxTitle">MayorViewHealthRep / MayorViewInventory</text>
+    <text x="20" y="221" class="member">+FilterByBarangay(), +FilterByPeriod()</text>
+    <text x="20" y="246" class="member">+DownloadRecordsPdf()</text>
+  </g>
+
+  <g transform="translate(1290,100)">
+    <rect x="0" y="0" width="420" height="280" rx="12" fill="#fff" stroke="#1b75bb" stroke-width="3"/>
+    <rect x="0" y="0" width="420" height="42" rx="12" fill="url(#header)"/>
+    <text x="210" y="28" text-anchor="middle" class="section">MayorFormHelper</text>
+    <text x="20" y="75" class="member">+LoadResidentAccounts()</text>
+    <text x="20" y="101" class="member">+LoadHealthRecords()</text>
+    <text x="20" y="127" class="member">+LoadInventory()</text>
+    <text x="20" y="153" class="member">+CountResidents(), +CountHealthRecords()</text>
+    <text x="20" y="179" class="member">+RenderHealthSummary()</text>
+    <text x="20" y="205" class="member">+ExportGridToPdf()</text>
+    <text x="20" y="231" class="member">+StyleGrid()</text>
+  </g>
+
+  <g transform="translate(60,470)">
+    <rect x="0" y="0" width="430" height="310" rx="12" fill="#fff" stroke="#1b75bb" stroke-width="3"/>
+    <rect x="0" y="0" width="430" height="42" rx="12" fill="url(#header)"/>
+    <text x="215" y="28" text-anchor="middle" class="section">Staff Area</text>
+    <text x="20" y="75" class="boxTitle">TayudLGU : Form</text>
+    <text x="20" y="101" class="member">+LoadRecentHealthRecords(), +LoadSummaryStats()</text>
+    <text x="20" y="135" class="boxTitle">TayudManageHealth / TayudViewHealth</text>
+    <text x="20" y="161" class="member">+AddRecord(), +UpdateRecord(), +ArchiveRecord()</text>
+    <text x="20" y="195" class="boxTitle">TayudInventory</text>
+    <text x="20" y="221" class="member">+AddMedicine(), +AddVaccine(), +ArchiveItems()</text>
+    <text x="20" y="255" class="boxTitle">TayudViewAppointments / TayudGenerateReport</text>
+    <text x="20" y="281" class="member">+ApproveAppointment(), +DownloadReportPdf()</text>
+  </g>
+
+  <g transform="translate(560,470)">
+    <rect x="0" y="0" width="450" height="310" rx="12" fill="#fff" stroke="#1b75bb" stroke-width="3"/>
+    <rect x="0" y="0" width="450" height="42" rx="12" fill="url(#header)"/>
+    <text x="225" y="28" text-anchor="middle" class="section">Barangay Captain Area</text>
+    <text x="20" y="75" class="boxTitle">TayudBCapDash : Form</text>
+    <text x="20" y="101" class="member">+LoadStats(), +LoadRecentRecords()</text>
+    <text x="20" y="135" class="boxTitle">TayudBCManageRes / TayudBCViewRes</text>
+    <text x="20" y="161" class="member">+ManageResidentRecords(), +DownloadRecordsPdf()</text>
+    <text x="20" y="195" class="boxTitle">TayudBCapManageResAcc / ViewResAcc</text>
+    <text x="20" y="221" class="member">+LoadAccounts(), +FreezeAccount(), +ArchiveAccount()</text>
+    <text x="20" y="255" class="boxTitle">TayudBCapManageFAcc / ViewArch</text>
+    <text x="20" y="281" class="member">+UnfreezeAccount(), +RestoreArchivedData()</text>
+  </g>
+
+  <g transform="translate(1080,470)">
+    <rect x="0" y="0" width="340" height="310" rx="12" fill="#fff" stroke="#1b75bb" stroke-width="3"/>
+    <rect x="0" y="0" width="340" height="42" rx="12" fill="url(#header)"/>
+    <text x="170" y="28" text-anchor="middle" class="section">Resident Area</text>
+    <text x="20" y="75" class="boxTitle">ResidentDash : Form</text>
+    <text x="20" y="101" class="member">+LoadResidentInfo()</text>
+    <text x="20" y="135" class="boxTitle">ResidentAppointment : Form</text>
+    <text x="20" y="161" class="member">+LoadServices(), +BookAppointment()</text>
+    <text x="20" y="186" class="member">+CancelAppointment(), +ViewHistory()</text>
+    <text x="20" y="220" class="boxTitle">ResViewHealth / ResViewServices</text>
+    <text x="20" y="246" class="member">+LoadHealthRecords()</text>
+    <text x="20" y="271" class="member">+DownloadMedicalCertificate()</text>
+  </g>
+
+  <g transform="translate(1480,470)">
+    <rect x="0" y="0" width="260" height="310" rx="12" fill="#fff" stroke="#1b75bb" stroke-width="3"/>
+    <rect x="0" y="0" width="260" height="42" rx="12" fill="url(#header)"/>
+    <text x="130" y="28" text-anchor="middle" class="section">Services</text>
+    <text x="20" y="75" class="boxTitle">BsmartNotificationService</text>
+    <text x="20" y="101" class="member">+AttachToOpenForms()</text>
+    <text x="20" y="126" class="member">-LoadNotifications()</text>
+    <text x="20" y="160" class="boxTitle">SearchSuggestionService</text>
+    <text x="20" y="186" class="member">+AttachToOpenForms()</text>
+    <text x="20" y="220" class="boxTitle">SettingsNavigationService</text>
+    <text x="20" y="246" class="member">+AttachToOpenForms()</text>
+  </g>
+
+  <g transform="translate(60,870)">
+    <rect x="0" y="0" width="420" height="210" rx="12" fill="#fff" stroke="#1b75bb" stroke-width="3"/>
+    <rect x="0" y="0" width="420" height="42" rx="12" fill="url(#header)"/>
+    <text x="210" y="28" text-anchor="middle" class="section">Registration and Settings</text>
+    <text x="20" y="75" class="boxTitle">Register / Register2 / Register3 : Form</text>
+    <text x="20" y="101" class="member">+CollectPersonalInfo(), +LoadBarangays()</text>
+    <text x="20" y="126" class="member">+CreateResidentAccount()</text>
+    <text x="20" y="160" class="boxTitle">Settings / Settings2 : Form</text>
+    <text x="20" y="186" class="member">+UpdateProfile(), +ChangePassword()</text>
+  </g>
+
+  <path class="dep" d="M360 210 C390 210 390 230 430 230"/><text x="372" y="198" class="rel">uses</text>
+  <path class="dep" d="M790 235 C820 235 820 235 850 235"/><text x="808" y="222" class="rel">opens</text>
+  <path class="dep" d="M1230 235 C1250 235 1260 235 1290 235"/><text x="1248" y="222" class="rel">uses</text>
+  <path class="dep" d="M490 625 C520 625 525 625 560 625"/><text x="510" y="612" class="rel">shares Session</text>
+  <path class="dep" d="M1010 625 C1040 625 1045 625 1080 625"/><text x="1025" y="612" class="rel">resident data</text>
+  <path class="dep" d="M1420 625 C1445 625 1450 625 1480 625"/><text x="1430" y="612" class="rel">notifications</text>
+  <path class="dep" d="M270 870 C350 820 410 780 560 705"/><text x="360" y="812" class="rel">registered accounts</text>
+  <text x="900" y="1140" text-anchor="middle" class="member">Major WinForms classes inherit from Form. Helper classes provide database, ID, PDF, notification, search, and settings behavior.</text>
+</svg>
